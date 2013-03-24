@@ -1,0 +1,17 @@
+@CHARSET "ISO-8859-1";
+
+.boxed {
+	border: 3px solid black;
+	align: left;
+	height: 30px;
+	width: 30px;
+}
+
+.para {
+	position: relative;
+	left: 50px;
+}
+
+.divWithBackgroundGrey {
+	background-color: grey;
+}
