@@ -3,10 +3,80 @@
 <head>
 <link rel="stylesheet" href="Format.css" type="text/css"></link>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>PAN card</title>
+<link rel="stylesheet" href="Format.css" type="text/css"/>
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css"/>
+<link rel="stylesheet" href="editablegrid-2.0.1.css" type="text/css" media="screen">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css" type="text/css"/>
+<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" type="text/css"/>
+<script type="text/javascript" src="bootstrap/js/jquery-1.9.1.js" ></script>
+<script type="text/javascript" src="bootstrap/js/jquery-1.9.1.min.js" ></script>
+<script type="text/javascript" src="bootstrap/js/img_upload.js" ></script>
+<script type="text/javascript" src="editablegrid-2.0.1.js" />
+<script src="../../editablegrid-2.0.1.js"></script>
+		<link rel="stylesheet" href="../../editablegrid-2.0.1.css" type="text/css" media="screen">
+
+ 
+ 
+
+ <script>
+			window.onload = function() {
+				editableGrid = new EditableGrid("DemoGridAttach"); 
+
+				// we build and load the metadata in Javascript
+				editableGrid.load({ metadata: [
+					{ name: "areacode1", datatype: "string", editable: true },
+					{ name: "areacode2", datatype: "string", editable: true },
+					{ name: "areacode3", datatype: "string", editable: true },
+					{ name: "aotype1", datatype: "string", editable: true },
+					{ name: "aotype2", datatype: "string", editable: true },
+					{ name: "rangecode1", datatype: "string", editable: true },
+					{ name: "rangecode2", datatype: "string", editable: true },
+					{ name: "rangecode3", datatype: "string", editable: true },
+					{ name: "aono1", datatype: "string", editable: true },
+					{ name: "aono2", datatype: "string", editable: true },
+					{ name: "aono3", datatype: "string", editable: true },
+					{ name: "aono4", datatype: "string", editable: true }
+				]});
+
+				// then we attach to the HTML table and render it
+				editableGrid.attachToHTMLTable('htmlgrid');
+				editableGrid.renderGrid();
+			} 
+		</script>
+
+
+ 
+<title>Insert title here</title>
 </head>
 <body>
-<form style= "border: 3px solid black;" action="">
+<!--<div class="boxed">
+  This text is enclosed in a box.
+</div>
+-->
+<form>
+<div class="fileupload fileupload-new" data-provides="fileupload" style="float:left;margin:20px">
+  <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"><img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image" /></div>
+  <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+  <div>
+  <center>
+    <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file" /></span>
+    <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+	</center>
+  </div>
+</div>
+        <div class="fileupload fileupload-new" data-provides="fileupload" style="float:right;margin:20px">
+  <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"><img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image" /></div>
+  <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+  <div>
+  <center>
+    <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file" /></span>
+    <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+	</center>
+  </div>
+</div>
+        
+        
 <p style="text-align: center;"><b>Form No. 49A<br>
 Application for Allotment of Permanent Account Number<br>
 [In the case of Indian Citizens/Indian Companies/Entities incorporated
@@ -17,32 +87,35 @@ Act, 1961</p>
 <p style="text-align: center; font-family: arial; font-size: 13px;">To
 avoid mistake (s), please follow the accompanying instructions and
 examples before filling up the form</p>
-<div class="divWithBackgroundGrey">
-<p style="text-align: center;"><b>Assessing officer (AO code)</b></p>
-</div>
-<!--<table border="3" bordercolor="black" align="center" cellspacing="0">
-	<tr>
-		<th colspan="3">Area code</th>
-		<th colspan="2">AO type</th>
-		<th colspan="3">Range code</th>
-		<th colspan="4">AO No.</th>
-	</tr>
-	<tr>
-		<td height="25" width="50"></td>
-		<td height="25" width="50"></td>
-		<td height="25" width="50"></td>
-		<td height="25" width="50"></td>
-		<td height="25" width="50"></td>
-		<td height="25" width="50"></td>
-		<td height="25" width="50"></td>
-		<td height="25" width="50"></td>
-		<td height="25" width="25"></td>
-		<td height="25" width="25"></td>
-		<td height="25" width="25"></td>
-		<td height="25" width="25"></td>
-	</tr>
-</table>
--->
+<p style="text-align: center; background-color: grey;"><b>Assessing
+officer (AO code)</b></p>
+<table id="htmlgrid" class="testgrid" border="1">
+			<tr >
+				<th colspan="3">Area Code</th>
+				<th colspan="2">AO Type</th>
+				<th colspan="3">Range Code</th>
+				<th colspan="4">AO No</th>
+				
+			</tr>
+			<tr id="R1">
+				<td >Duke</td>
+				<td>Patience</td>
+				<td>asf</td>
+				<td>asdfds</td>
+				<td >Duke</td>
+				<td>Patience</td>
+				<td>sadf</td>
+				<td>asdf</td>
+				<td >Duke</td>
+				<td>Patience</td>
+				<td>asdf</td>
+				<td>asdfd</td>
+				
+			</tr>
+			
+			
+		</table>
+
 <div style="position: relative; left: 80px;">Sir,<br>
 I/We hereby request that a permanent account number be allotted to
 me/us.<br>

@@ -1,0 +1,12 @@
+{
+  "js": [
+    "bootstrap-fileupload.js"
+  ],
+  "css": [],
+  "img": [
+    "glyphicons-halflings.png",
+    "glyphicons-halflings-white.png"
+  ],
+  "font": [],
+  "vars": {}
+}
