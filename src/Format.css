@@ -35,3 +35,16 @@ table#abbreviation tr td{
 	height: 20px;
 	width: 20px;
 }
+
+table#nameOffice tr td{
+	height: 20px;
+	width: 20px;
+}
+table#roomNo tr td{
+	height: 20px;
+	width: 20px;
+}
+table#building tr td{
+	height: 20px;
+	width: 20px;
+}
