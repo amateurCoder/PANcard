@@ -31,6 +31,12 @@ table#fullNameMiddleName tr td{
 	width: 20px;
 }
 
+table#abbreviation tr td{
+	height: 20px;
+	width: 20px;
+}
+
+
 table#otherNameLastName tr td{
 	height: 20px;
 	width: 20px;
@@ -46,27 +52,31 @@ table#otherNameMiddleName tr td{
 	width: 20px;
 }
 
-table#abbreviation tr td{
+table#fatherNameLastName tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#fatherNameFirstName tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#fatherNameMiddleName tr td{
 	height: 20px;
 	width: 20px;
 }
 
 table#dobDay tr th{
-	border-left: hidden;
-	border-right: hidden;
-	border-top: hidden;
+	border-left: hidden; border-right: hidden; border-top: hidden;
 }
 
 table#dobMonth tr th{
-	border-left: hidden;
-	border-right: hidden;
-	border-top: hidden;
+	border-left: hidden; border-right: hidden; border-top: hidden;
 }
 
 table#dobYear tr th{
-	border-left: hidden;
-	border-right: hidden;
-	border-top: hidden;
+	border-left: hidden; border-right: hidden; border-top: hidden;
 }
 
 table#dobDay tr td{
@@ -84,17 +94,16 @@ table#dobYear tr td{
 	width: 20px;
 }
 
-table#fatherNameLastName tr td{
+
+table#nameOffice tr td{
 	height: 20px;
 	width: 20px;
 }
-
-table#fatherNameFirstName tr td{
+table#roomNo tr td{
 	height: 20px;
 	width: 20px;
 }
-
-table#fatherNameMiddleName tr td{
+table#building tr td{
 	height: 20px;
 	width: 20px;
 }
