@@ -3,80 +3,760 @@
 <head>
 <link rel="stylesheet" href="Format.css" type="text/css"></link>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="Format.css" type="text/css"/>
-<link rel="stylesheet" href="bootstrap/css/bootstrap.css" type="text/css"/>
-<link rel="stylesheet" href="editablegrid-2.0.1.css" type="text/css" media="screen">
-<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"/>
-<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css" type="text/css"/>
-<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css" type="text/css"/>
-<script type="text/javascript" src="bootstrap/js/jquery-1.9.1.js" ></script>
-<script type="text/javascript" src="bootstrap/js/jquery-1.9.1.min.js" ></script>
-<script type="text/javascript" src="bootstrap/js/img_upload.js" ></script>
-<script type="text/javascript" src="editablegrid-2.0.1.js" />
+<link rel="stylesheet" href="Format.css" type="text/css" />
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css"
+	type="text/css" />
+<link rel="stylesheet" href="editablegrid-2.0.1.css" type="text/css"
+	media="screen">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"
+	type="text/css" />
+<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css"
+	type="text/css" />
+<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.min.css"
+	type="text/css" />
+<script type="text/javascript" src="bootstrap/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="bootstrap/js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/img_upload.js"></script>
+<script type="text/javascript" src="editablegrid-2.0.1.js"></script>
 <script src="../../editablegrid-2.0.1.js"></script>
-		<link rel="stylesheet" href="../../editablegrid-2.0.1.css" type="text/css" media="screen">
-
- 
- 
-
- <script>
-			window.onload = function() {
-				editableGrid = new EditableGrid("DemoGridAttach"); 
-
-				// we build and load the metadata in Javascript
-				editableGrid.load({ metadata: [
-					{ name: "areacode1", datatype: "string", editable: true },
-					{ name: "areacode2", datatype: "string", editable: true },
-					{ name: "areacode3", datatype: "string", editable: true },
-					{ name: "aotype1", datatype: "string", editable: true },
-					{ name: "aotype2", datatype: "string", editable: true },
-					{ name: "rangecode1", datatype: "string", editable: true },
-					{ name: "rangecode2", datatype: "string", editable: true },
-					{ name: "rangecode3", datatype: "string", editable: true },
-					{ name: "aono1", datatype: "string", editable: true },
-					{ name: "aono2", datatype: "string", editable: true },
-					{ name: "aono3", datatype: "string", editable: true },
-					{ name: "aono4", datatype: "string", editable: true }
-				]});
-
-				// then we attach to the HTML table and render it
-				editableGrid.attachToHTMLTable('htmlgrid');
-				editableGrid.renderGrid();
-			} 
-		</script>
+<link rel="stylesheet" href="../../editablegrid-2.0.1.css"
+	type="text/css" media="screen">
 
 
- 
+
+<script>
+	window.onload = function() {
+		editableGridArea = new EditableGrid("EditableGridArea");
+		editableGridFullNameLastName = new EditableGrid(
+				"EditableGridFullNameLastName");
+		editableGridFullNameFirstName = new EditableGrid(
+				"EditableGridFullNameFirstName");
+		editableGridFullNameMiddleName = new EditableGrid(
+				"EditableGridFullNameMiddleName");
+		editableGridAbbreviation = new EditableGrid(
+		"EditableGridAbbreviation");
+
+		// we build and load the metadata in Javascript
+		editableGridArea.load( {
+			metadata : [ {
+				name : "areacode1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "areacode2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "areacode3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aotype1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aotype2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "rangecode1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "rangecode2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "rangecode3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aono1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aono2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aono3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aono4",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridFullNameLastName.load( {
+			metadata : [ {
+				name : "l1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l4",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l5",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l6",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l7",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l8",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l9",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l10",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l11",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l12",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l13",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l14",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l15",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l16",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l17",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l18",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l19",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l20",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l21",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l22",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l23",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l24",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "l25",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridFullNameFirstName.load( {
+			metadata : [ {
+				name : "f1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f4",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f5",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f6",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f7",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f8",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f9",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f10",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f11",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f12",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f13",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f14",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f15",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f16",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f17",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f18",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f19",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f20",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f21",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f22",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f23",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f24",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "f25",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridFullNameMiddleName.load( {
+			metadata : [ {
+				name : "m1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m4",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m5",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m6",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m7",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m8",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m9",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m10",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m11",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m12",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m13",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m14",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m15",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m16",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m17",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m18",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m19",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m20",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m21",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m22",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m23",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m24",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "m25",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridAbbreviation.load( {
+			metadata : [{
+				name : "a1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a3",
+				datatype : "string",
+				editabae : true
+			}, {
+				name : "a4",
+				datatype : "string",
+				editable : true
+			},  {
+				name : "a5",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a6",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a7",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a8",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a9",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a10",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a11",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a12",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a13",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a14",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a15",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a16",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a17",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a18",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a19",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a20",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a21",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a22",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a23",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a24",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a25",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a26",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a27",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a28",
+				datatype : "string",
+				editabae : true
+			}, {
+				name : "a29",
+				datatype : "string",
+				editable : true
+			},  {
+				name : "a30",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a31",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a32",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a33",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a34",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a35",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a36",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a37",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a38",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a39",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a40",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a41",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a42",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a43",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a44",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a45",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a46",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a47",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a48",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a49",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a50",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a51",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a52",
+				datatype : "string",
+				editabae : true
+			}, {
+				name : "a53",
+				datatype : "string",
+				editable : true
+			},  {
+				name : "a54",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a55",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a56",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a57",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a58",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a59",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a60",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a61",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a62",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a63",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a64",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a65",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a66",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a67",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a68",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a69",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a70",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a71",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a72",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a73",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "a74",
+				datatype : "string",
+				editable : true
+			}]
+		});
+
+		// then we attach to the HTML table and render it
+		editableGridArea.attachToHTMLTable('htmlgrid');
+		editableGridArea.renderGrid();
+
+		editableGridFullNameLastName.attachToHTMLTable('fullNameLastName');
+		editableGridFullNameLastName.renderGrid();
+
+		editableGridFullNameFirstName.attachToHTMLTable('fullNameFirstName');
+		editableGridFullNameFirstName.renderGrid();
+
+		editableGridFullNameMiddleName.attachToHTMLTable('fullNameMiddleName');
+		editableGridFullNameMiddleName.renderGrid();
+
+		editableGridAbbreviation.attachToHTMLTable('abbreviation');
+		editableGridAbbreviation.renderGrid();
+	}
+</script>
+
+
+
 <title>Insert title here</title>
 </head>
 <body>
-<!--<div class="boxed">
-  This text is enclosed in a box.
-</div>
--->
 <form>
-<div class="fileupload fileupload-new" data-provides="fileupload" style="float:left;margin:20px">
-  <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"><img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image" /></div>
-  <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
-  <div>
-  <center>
-    <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file" /></span>
-    <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
-	</center>
-  </div>
+<div class="fileupload fileupload-new" data-provides="fileupload"
+	style="float: left; margin: 20px">
+<div class="fileupload-new thumbnail"
+	style="width: 200px; height: 150px;"><img
+	src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image" /></div>
+<div class="fileupload-preview fileupload-exists thumbnail"
+	style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+<div>
+<center><span class="btn btn-file"><span
+	class="fileupload-new">Select image</span><span
+	class="fileupload-exists">Change</span><input type="file" /></span> <a
+	href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+</center>
 </div>
-        <div class="fileupload fileupload-new" data-provides="fileupload" style="float:right;margin:20px">
-  <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;"><img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image" /></div>
-  <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
-  <div>
-  <center>
-    <span class="btn btn-file"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><input type="file" /></span>
-    <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
-	</center>
-  </div>
 </div>
-        
-        
+<div class="fileupload fileupload-new" data-provides="fileupload"
+	style="float: right; margin: 20px">
+<div class="fileupload-new thumbnail"
+	style="width: 200px; height: 150px;"><img
+	src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&text=no+image" /></div>
+<div class="fileupload-preview fileupload-exists thumbnail"
+	style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+<div>
+<center><span class="btn btn-file"><span
+	class="fileupload-new">Select image</span><span
+	class="fileupload-exists">Change</span><input type="file" /></span> <a
+	href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+</center>
+</div>
+</div>
+
+
 <p style="text-align: center;"><b>Form No. 49A<br>
 Application for Allotment of Permanent Account Number<br>
 [In the case of Indian Citizens/Indian Companies/Entities incorporated
@@ -90,32 +770,32 @@ examples before filling up the form</p>
 <p style="text-align: center; background-color: grey;"><b>Assessing
 officer (AO code)</b></p>
 <table id="htmlgrid" class="testgrid" border="1">
-			<tr >
-				<th colspan="3">Area Code</th>
-				<th colspan="2">AO Type</th>
-				<th colspan="3">Range Code</th>
-				<th colspan="4">AO No</th>
-				
-			</tr>
-			<tr id="R1">
-				<td >Duke</td>
-				<td>Patience</td>
-				<td>asf</td>
-				<td>asdfds</td>
-				<td >Duke</td>
-				<td>Patience</td>
-				<td>sadf</td>
-				<td>asdf</td>
-				<td >Duke</td>
-				<td>Patience</td>
-				<td>asdf</td>
-				<td>asdfd</td>
-				
-			</tr>
-			
-			
-		</table>
+	<tr>
+		<th colspan="3">Area Code</th>
+		<th colspan="2">AO Type</th>
+		<th colspan="3">Range Code</th>
+		<th colspan="4">AO No</th>
 
+	</tr>
+	<tr id="R1">
+		<td>Duke</td>
+		<td>Patience</td>
+		<td>asf</td>
+		<td>asdfds</td>
+		<td>Duke</td>
+		<td>Patience</td>
+		<td>sadf</td>
+		<td>asdf</td>
+		<td>Duke</td>
+		<td>Patience</td>
+		<td>asdf</td>
+		<td>asdfd</td>
+
+	</tr>
+
+
+</table>
+<br>
 <div style="position: relative; left: 80px;">Sir,<br>
 I/We hereby request that a permanent account number be allotted to
 me/us.<br>
@@ -133,18 +813,207 @@ applicable</i></b> <input type="checkbox" name="designation" value="Shri"><b>Shr
 <input type="checkbox" name="designation" value="Kumari"><b>Kumari</b>
 <input type="checkbox" name="designation" value="Ms"><b>M/s</b></div>
 <br>
-<div style="position: relative; left: 70px;"><b>Last Name /
-Surname</b></div>
-<br>
-<div style="position: relative; left: 70px;"><b>First Name</b></div>
-<br>
-<div style="position: relative; left: 70px;"><b>Middle Name</b></div>
+<table style="position: relative; left: 70px;" cellspacing="0">
+	<tr>
+		<td>Last Name / Surname</td>
+		<td>
+		<table id="fullNameLastName" border="1">
+			<tr hidden>
+				<th colspan="25"></th>
+			</tr>
+			<tr id="L">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>First Name</td>
+		<td>
+		<table id="fullNameFirstName" border="1">
+			<tr hidden>
+				<th colspan="25"></th>
+			</tr>
+			<tr id="F">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>Middle Name</td>
+		<td>
+		<table id="fullNameMiddleName" border="1">
+			<tr hidden>
+				<th colspan="25"></th>
+			</tr>
+			<tr id="M">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
 <br>
 <div class="divWithBackgroundGrey">
 <p class="para"><b>2 Abbreviation of the above name, as you
 would like it, to be printed on the PAN card</b></p>
 </div>
-<br>
+<table id="abbreviation" border="1" style="position: relative; left: 70px;">
+			<tr hidden>
+				<th colspan="37"></th>
+			</tr>
+			<tr id="A1">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr id="A2">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
 <br>
 <div class="divWithBackgroundGrey">
 <p class="para"><b>3 Have you ever been known by any other name?</b><input
@@ -321,8 +1190,8 @@ address of the Representative Assessee, who is assessable under the
 Income Tax Act in respect of the person, whose particulars have been
 given in the column 1-13.</b></div>
 <div class="divWithBackgroundGrey">
-<p class="para" style="left: 70px;"><b>Full Name (Full expanded name: initials are
-not permitted)</b></p>
+<p class="para" style="left: 70px;"><b>Full Name (Full expanded
+name: initials are not permitted)</b></p>
 </div>
 <div style="position: relative; left: 70px;"><i><b>Please
 select title,</b></i> <span class="boxed"

@@ -15,3 +15,23 @@
 .divWithBackgroundGrey {
 	background-color: grey;
 }
+
+table#fullNameLastName tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#fullNameFirstName tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#fullNameMiddleName tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#abbreviation tr td{
+	height: 20px;
+	width: 20px;
+}
