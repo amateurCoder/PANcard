@@ -31,7 +31,70 @@ table#fullNameMiddleName tr td{
 	width: 20px;
 }
 
+table#otherNameLastName tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#otherNameFirstName tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#otherNameMiddleName tr td{
+	height: 20px;
+	width: 20px;
+}
+
 table#abbreviation tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#dobDay tr th{
+	border-left: hidden;
+	border-right: hidden;
+	border-top: hidden;
+}
+
+table#dobMonth tr th{
+	border-left: hidden;
+	border-right: hidden;
+	border-top: hidden;
+}
+
+table#dobYear tr th{
+	border-left: hidden;
+	border-right: hidden;
+	border-top: hidden;
+}
+
+table#dobDay tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#dobMonth tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#dobYear tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#fatherNameLastName tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#fatherNameFirstName tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#fatherNameMiddleName tr td{
 	height: 20px;
 	width: 20px;
 }
