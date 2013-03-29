@@ -95,15 +95,27 @@ table#dobYear tr td{
 }
 
 
-table#nameOffice tr td{
+table#officeName tr td{
 	height: 20px;
 	width: 20px;
 }
-table#roomNo tr td{
+table#officeRoomNo tr td{
 	height: 20px;
 	width: 20px;
 }
-table#building tr td{
+table#officeBuilding tr td{
+	height: 20px;
+	width: 20px;
+}
+table#officeRoad tr td{
+	height: 20px;
+	width: 20px;
+}
+table#officeArea tr td{
+	height: 20px;
+	width: 20px;
+}
+table#officeTown tr td{
 	height: 20px;
 	width: 20px;
 }
