@@ -1,0 +1,11 @@
+<web-app xmlns="http://localhost:8080/myfirstapp/">
+  <servlet>
+    <servlet-name>pan</servlet-name>
+    <servlet-class>example.PanServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <url-pattern>/pan</url-pattern>
+    <servlet-name>pan</servlet-name>
+  </servlet-mapping>
+</web-app>
