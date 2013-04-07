@@ -94,6 +94,26 @@ table#dobYear tr td{
 	width: 20px;
 }
 
+table#residenceRoomNo tr td{
+	height: 20px;
+	width: 20px;
+}
+table#residenceBuilding tr td{
+	height: 20px;
+	width: 20px;
+}
+table#residenceRoad tr td{
+	height: 20px;
+	width: 20px;
+}
+table#residenceArea tr td{
+	height: 20px;
+	width: 20px;
+}
+table#residenceTown tr td{
+	height: 20px;
+	width: 20px;
+}
 
 table#officeName tr td{
 	height: 20px;
@@ -119,3 +139,31 @@ table#officeTown tr td{
 	height: 20px;
 	width: 20px;
 }
+
+table#detailsCountryCode tr th{
+	border-left: hidden; border-right: hidden; border-top: hidden;
+}
+
+table#detailsStdCode tr th{
+	border-left: hidden; border-right: hidden; border-top: hidden;
+}
+
+table#detailsTelephoneNumber tr th{
+	border-left: hidden; border-right: hidden; border-top: hidden;
+}
+
+table#detailsCountryCode tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#detailsStdCode tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#detailsTelephoneNumber tr td{
+	height: 20px;
+	width: 20px;
+}
+
