@@ -33,8 +33,7 @@
 				"EditableGridFullNameFirstName");
 		editableGridFullNameMiddleName = new EditableGrid(
 				"EditableGridFullNameMiddleName");
-		editableGridAbbreviation = new EditableGrid(
-		"EditableGridAbbreviation");
+		editableGridAbbreviation = new EditableGrid("EditableGridAbbreviation");
 		editableGridOtherNameLastName = new EditableGrid(
 				"EditableGridOtherNameLastName");
 		editableGridOtherNameFirstName = new EditableGrid(
@@ -53,26 +52,51 @@
 		editableGridFatherNameMiddleName = new EditableGrid(
 				"EditableGridFatherNameMiddleName");
 
+		editableGridResidenceRoomNo = new EditableGrid(
+				"EditableGridResidenceRoomNo");
+		editableGridResidenceBuilding = new EditableGrid(
+				"EditableGridResidenceBuilding");
+		editableGridResidenceRoad = new EditableGrid(
+				"EditableGridResidenceRoad");
+		editableGridResidenceArea = new EditableGrid(
+				"EditableGridResidenceArea");
+		editableGridResidenceTown = new EditableGrid(
+				"EditableGridResidenceTown");
 
-		editableGridResidenceRoomNo = new EditableGrid("EditableGridResidenceRoomNo");
-		editableGridResidenceBuilding = new EditableGrid("EditableGridResidenceBuilding");
-		editableGridResidenceRoad = new EditableGrid("EditableGridResidenceRoad");
-		editableGridResidenceArea = new EditableGrid("EditableGridResidenceArea");
-		editableGridResidenceTown = new EditableGrid("EditableGridResidenceTown");
-		
 		editableGridOfficeName = new EditableGrid("EditableGridOfficeName");
 		editableGridOfficeRoomNo = new EditableGrid("EditableGridOfficeRoomNo");
-		editableGridOfficeBuilding = new EditableGrid("EditableGridOfficeBuilding");
+		editableGridOfficeBuilding = new EditableGrid(
+				"EditableGridOfficeBuilding");
 		editableGridOfficeRoad = new EditableGrid("EditableGridOfficeRoad");
 		editableGridOfficeArea = new EditableGrid("EditableGridOfficeArea");
 		editableGridOfficeTown = new EditableGrid("EditableGridOfficeTown");
 
-		editableGridDetailsCountryCode = new EditableGrid("EditableGridDetailsCountryCode");
-		editableGridDetailsStdCode = new EditableGrid("EditableGridDetailsStdCode");
-		editableGridDetailsTelephoneNumber = new EditableGrid("EditableGridDetailsTelephoneNumber");
-		
-		
-		
+		editableGridDetailsCountryCode = new EditableGrid(
+				"EditableGridDetailsCountryCode");
+		editableGridDetailsStdCode = new EditableGrid(
+				"EditableGridDetailsStdCode");
+		editableGridDetailsTelephoneNumber = new EditableGrid(
+				"EditableGridDetailsTelephoneNumber");
+
+		editableGridRegistrationNumber = new EditableGrid(
+				"EditableGridRegistrationNumber");
+
+		editableGridAadhaarNumber = new EditableGrid(
+				"EditableGridAadhaarNumber");
+
+		editableGridRepNameLastName = new EditableGrid(
+				"EditableGridRepNameLastName");
+		editableGridRepNameFirstName = new EditableGrid(
+				"EditableGridRepNameFirstName");
+		editableGridRepNameMiddleName = new EditableGrid(
+				"EditableGridRepNameMiddleName");
+
+		editableGridRepRoomNo = new EditableGrid("EditableGridRepRoomNo");
+		editableGridRepBuilding = new EditableGrid("EditableGridRepBuilding");
+		editableGridRepRoad = new EditableGrid("EditableGridRepRoad");
+		editableGridRepArea = new EditableGrid("EditableGridRepArea");
+		editableGridRepTown = new EditableGrid("EditableGridRepTown");
+
 		// we build and load the metadata in Javascript
 		editableGridArea.load( {
 			metadata : [ {
@@ -229,7 +253,7 @@
 				editable : true
 			} ]
 		});
-		
+
 		editableGridFullNameFirstName.load( {
 			metadata : [ {
 				name : "f1",
@@ -437,9 +461,9 @@
 				editable : true
 			} ]
 		});
-		
+
 		editableGridAbbreviation.load( {
-			metadata : [{
+			metadata : [ {
 				name : "a1",
 				datatype : "string",
 				editable : true
@@ -455,7 +479,7 @@
 				name : "a4",
 				datatype : "string",
 				editable : true
-			},  {
+			}, {
 				name : "a5",
 				datatype : "string",
 				editable : true
@@ -555,7 +579,7 @@
 				name : "a29",
 				datatype : "string",
 				editable : true
-			},  {
+			}, {
 				name : "a30",
 				datatype : "string",
 				editable : true
@@ -651,7 +675,7 @@
 				name : "a53",
 				datatype : "string",
 				editable : true
-			},  {
+			}, {
 				name : "a54",
 				datatype : "string",
 				editable : true
@@ -735,7 +759,7 @@
 				name : "a74",
 				datatype : "string",
 				editable : true
-			}]
+			} ]
 		});
 
 		editableGridOtherNameLastName.load( {
@@ -1406,7 +1430,6 @@
 			} ]
 		});
 
-
 		editableGridResidenceRoomNo.load( {
 			metadata : [ {
 				name : "rr1",
@@ -1719,7 +1742,6 @@
 			} ]
 		});
 
-
 		editableGridResidenceArea.load( {
 			metadata : [ {
 				name : "rarea1",
@@ -1927,7 +1949,7 @@
 				editable : true
 			} ]
 		});
-		
+
 		editableGridOfficeName.load( {
 			metadata : [ {
 				name : "on1",
@@ -2031,7 +2053,7 @@
 				editable : true
 			} ]
 		});
-		
+
 		editableGridOfficeRoomNo.load( {
 			metadata : [ {
 				name : "or1",
@@ -2135,7 +2157,7 @@
 				editable : true
 			} ]
 		});
-		
+
 		editableGridOfficeBuilding.load( {
 			metadata : [ {
 				name : "obl1",
@@ -2447,7 +2469,7 @@
 				editable : true
 			} ]
 		});
-		
+
 		editableGridOfficeTown.load( {
 			metadata : [ {
 				name : "otown1",
@@ -2558,7 +2580,7 @@
 				datatype : "string",
 				editable : true
 			}, {
-			name : "detailsCC2",
+				name : "detailsCC2",
 				datatype : "string",
 				editable : true
 			}, {
@@ -2596,7 +2618,7 @@
 			}, {
 				name : "detailsSC7",
 				datatype : "string",
-				editable : true	
+				editable : true
 			} ]
 		});
 
@@ -2655,9 +2677,1015 @@
 				editable : true
 			} ]
 		});
-	
-		
-		
+
+		editableGridRegistrationNumber.load( {
+			metadata : [ {
+				name : "regNumber1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber4",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber5",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber6",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber7",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber8",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber9",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber10",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber11",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber12",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber13",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber14",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber15",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber16",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber17",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber18",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber19",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber20",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber21",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber22",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber23",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber24",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber25",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber26",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber27",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber28",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber29",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "regNumber30",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridAadhaarNumber.load( {
+			metadata : [ {
+				name : "aadhaarNumber1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aadhaarNumber2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aadhaarNumber3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aadhaarNumber4",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aadhaarNumber5",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aadhaarNumber6",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aadhaarNumber7",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aadhaarNumber8",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aadhaarNumber9",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aadhaarNumber10",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aadhaarNumber11",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "aadhaarNumber12",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridRepNameLastName.load( {
+			metadata : [ {
+				name : "repL1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL4",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL5",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL6",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL7",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL8",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL9",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL10",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL11",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL12",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL13",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL14",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL15",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL16",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL17",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL18",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL19",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL20",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL21",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL22",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL23",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL24",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repL25",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridRepNameFirstName.load( {
+			metadata : [ {
+				name : "repF1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF4",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF5",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF6",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF7",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF8",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF9",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF10",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF11",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF12",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF13",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF14",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF15",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF16",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF17",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF18",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF19",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF20",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF21",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF22",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF23",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF24",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repF25",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridRepNameMiddleName.load( {
+			metadata : [ {
+				name : "repM1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM4",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM5",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM6",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM7",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM8",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM9",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM10",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM11",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM12",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM13",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM14",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM15",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM16",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM17",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM18",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM19",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM20",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM21",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM22",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM23",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM24",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repM25",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridRepRoomNo.load( {
+			metadata : [ {
+				name : "repr1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr4",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr5",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr6",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr7",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr8",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr9",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr10",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr11",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr12",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr13",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr14",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr15",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr16",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr17",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr18",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr19",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr20",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr21",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr22",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr23",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr24",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repr25",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridRepBuilding.load( {
+			metadata : [ {
+				name : "repbl1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl4",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl5",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl6",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl7",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl8",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl9",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl10",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl11",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl12",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl13",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl14",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl15",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl16",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl17",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl18",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl19",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl20",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl21",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl22",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl23",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl24",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "repbl25",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridRepRoad.load( {
+			metadata : [ {
+				name : "reproad1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad4",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad5",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad6",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad7",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad8",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad9",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad10",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad11",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad12",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad13",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad14",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad15",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad16",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad17",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad18",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad19",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad20",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad21",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad22",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad23",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad24",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reproad25",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridRepArea.load( {
+			metadata : [ {
+				name : "reparea1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea4",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea5",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea6",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea7",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea8",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea9",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea10",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea11",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea12",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea13",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea14",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea15",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea16",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea17",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea18",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea19",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea20",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea21",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea22",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea23",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea24",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reparea25",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridRepTown.load( {
+			metadata : [ {
+				name : "reptown1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown4",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown5",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown6",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown7",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown8",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown9",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown10",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown11",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown12",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown13",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown14",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown15",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown16",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown17",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown18",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown19",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown20",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown21",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown22",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown23",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown24",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "reptown25",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
 		// then we attach to the HTML table and render it
 		editableGridArea.attachToHTMLTable('htmlgrid');
 		editableGridArea.renderGrid();
@@ -2673,17 +3701,17 @@
 
 		editableGridAbbreviation.attachToHTMLTable('abbreviation');
 		editableGridAbbreviation.renderGrid();
-		
+
 		editableGridOtherNameLastName.attachToHTMLTable('otherNameLastName');
 		editableGridOtherNameLastName.renderGrid();
 
 		editableGridOtherNameFirstName.attachToHTMLTable('otherNameFirstName');
 		editableGridOtherNameFirstName.renderGrid();
 
-		editableGridOtherNameMiddleName.attachToHTMLTable('otherNameMiddleName');
+		editableGridOtherNameMiddleName
+				.attachToHTMLTable('otherNameMiddleName');
 		editableGridOtherNameMiddleName.renderGrid();
 
-		
 		editableGridDobDay.attachToHTMLTable('dobDay');
 		editableGridDobDay.renderGrid();
 
@@ -2696,10 +3724,12 @@
 		editableGridFatherNameLastName.attachToHTMLTable('fatherNameLastName');
 		editableGridFatherNameLastName.renderGrid();
 
-		editableGridFatherNameFirstName.attachToHTMLTable('fatherNameFirstName');
+		editableGridFatherNameFirstName
+				.attachToHTMLTable('fatherNameFirstName');
 		editableGridFatherNameFirstName.renderGrid();
 
-		editableGridFatherNameMiddleName.attachToHTMLTable('fatherNameMiddleName');
+		editableGridFatherNameMiddleName
+				.attachToHTMLTable('fatherNameMiddleName');
 		editableGridFatherNameMiddleName.renderGrid();
 
 		editableGridResidenceRoomNo.attachToHTMLTable('residenceRoomNo');
@@ -2732,10 +3762,37 @@
 		editableGridDetailsStdCode.attachToHTMLTable('detailsStdCode');
 		editableGridDetailsStdCode.renderGrid();
 
-		editableGridDetailsTelephoneNumber.attachToHTMLTable('detailsTelephoneNumber');
+		editableGridDetailsTelephoneNumber
+				.attachToHTMLTable('detailsTelephoneNumber');
 		editableGridDetailsTelephoneNumber.renderGrid();
 
+		editableGridRegistrationNumber.attachToHTMLTable('registrationNumber');
+		editableGridRegistrationNumber.renderGrid();
+
+		editableGridAadhaarNumber.attachToHTMLTable('aadhaarNumber');
+		editableGridAadhaarNumber.renderGrid();
+
+		editableGridRepNameLastName.attachToHTMLTable('repNameLastName');
+		editableGridRepNameLastName.renderGrid();
+
+		editableGridRepNameFirstName.attachToHTMLTable('repNameFirstName');
+		editableGridRepNameFirstName.renderGrid();
+
+		editableGridRepNameMiddleName.attachToHTMLTable('repNameMiddleName');
+		editableGridRepNameMiddleName.renderGrid();
+
+		editableGridRepRoomNo.attachToHTMLTable('repRoomNo');
+		editableGridRepRoomNo.renderGrid();
+		editableGridRepBuilding.attachToHTMLTable('repBuilding');
+		editableGridRepBuilding.renderGrid();
+		editableGridRepRoad.attachToHTMLTable('repRoad');
+		editableGridRepRoad.renderGrid();
+		editableGridRepArea.attachToHTMLTable('repArea');
+		editableGridRepArea.renderGrid();
+		editableGridRepTown.attachToHTMLTable('repTown');
+		editableGridRepTown.renderGrid();
 		
+
 	}
 </script>
 
@@ -2743,10 +3800,9 @@
 
 <title>Insert title here</title>
 </head>
-<body style="width:auto;overflow-x:hidden">
-<div class="row" >
-<div class="span1">
-</div>
+<body style="width: auto; overflow-x: hidden">
+<div class="row">
+<div class="span1"></div>
 <div class="span10">
 <form method="post" action="pan">
 <div class="fileupload fileupload-new" data-provides="fileupload"
@@ -3848,11 +4904,13 @@ applicable)</i></p>
 </table>
 <br>
 </div>
-<br> 
+<br>
 
 
 <br>
-<div style="position: relative; left: 70px;">Email ID</div><br><br>
+<div style="position: relative; left: 70px;">Email ID</div>
+<br>
+<br>
 <div class="divWithBackgroundGrey">
 <p class="para"><b>10 Status of applicant</b></p>
 </div>
@@ -3881,13 +4939,77 @@ Partnership</b></div>
 <p class="para"><b>11 Registration Number (for company, firms,
 LLPs, etc.)</b></p>
 </div>
+<table id="registrationNumber" border="1"
+	style="float: left; position: relative; left: 60px;">
+	<tr hidden>
+		<th colspan="30"></th>
+	</tr>
+	<tr id="RNumber">
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
 <br>
 <br>
 <div class="divWithBackgroundGrey">
 <p class="para"><b>12 In case of a citizen of India, then</b></p>
 </div>
-<div style="position: relative; left: 70px;"><b>Please mention
-your AADHAAR number (if allotted)</b></div>
+<table style="position: relative; left: 70px;" cellspacing="0">
+	<tr>
+		<td>Please mention your AADHAAR number (if allotted)</td>
+		<td>
+		<table id="aadhaarNumber" border="1">
+			<tr hidden>
+				<th colspan="12"></th>
+			</tr>
+			<tr id="ANumber">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
+
+
 <div class="divWithBackgroundGrey">
 <p class="para"><b>13 Source of Income</b></p>
 </div>
@@ -3922,32 +5044,314 @@ applicable</i></b> <input type="checkbox" name="designation" value="Shri"><b>Shr
 <input type="checkbox" name="designation" value="Smt"><b>Smt.</b>
 <input type="checkbox" name="designation" value="Kumari"><b>Kumari</b>
 <input type="checkbox" name="designation" value="Ms"><b>M/s</b></div>
-<div style="position: relative; left: 70px;"><b>Last Name /
-Surname</b></div>
-<br>
-<div style="position: relative; left: 70px;"><b>First Name</b></div>
-<br>
-<div style="position: relative; left: 70px;"><b>Middle Name</b></div>
-<br>
+
+<table style="position: relative; left: 70px;" cellspacing="0">
+	<tr>
+		<td>Last Name / Surname</td>
+		<td>
+		<table id="repNameLastName" border="1">
+			<tr hidden>
+				<th colspan="25"></th>
+			</tr>
+			<tr id="RepL">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>First Name</td>
+		<td>
+		<table id="repNameFirstName" border="1">
+			<tr hidden>
+				<th colspan="25"></th>
+			</tr>
+			<tr id="RepF">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>Middle Name</td>
+		<td>
+		<table id="repNameMiddleName" border="1">
+			<tr hidden>
+				<th colspan="25"></th>
+			</tr>
+			<tr id="RepM">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
 <br>
 <div class="divWithBackgroundGrey">
 <p class="para" style="left: 70px;"><b>Address</b></p>
 </div>
-<div style="position: relative; left: 70px;">Flat/Room/ Door /
-Block No.</div>
-<br>
-<div style="position: relative; left: 70px;">Name of Premises/
-Building/ Village</div>
-<br>
-<div style="position: relative; left: 70px;">Road/Street/
-Lane/Post Office</div>
-<br>
-<div style="position: relative; left: 70px;">Area / Locality /
-Taluka/ Sub-Division</div>
-<br>
-<div style="position: relative; left: 70px;">Town / City /
-District</div>
-<br>
+
+<table id="repAddress" cellspacing=0 style="margin-left: 70px">
+	<tr>
+		<td>Flat/Room/ Door / Block No.</td>
+		<td>
+		<table id="repRoomNo" border="1">
+			<tr hidden>
+				<th colspan="25"></th>
+			</tr>
+			<tr id="RepRoomNumber">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>Name of Premises/ Building/ Village</td>
+		<td>
+		<table id="repBuilding" border="1">
+			<tr hidden>
+				<th colspan="25"></th>
+			</tr>
+			<tr id="RepBuilding">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>Road/Street/ Lane/Post Office</td>
+		<td>
+		<table id="repRoad" border="1">
+			<tr hidden>
+				<th colspan="25"></th>
+			</tr>
+			<tr id="RepRoad">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>Area / Locality / Taluka/ Sub-Division</td>
+		<td>
+		<table id="repArea" border="1">
+			<tr hidden>
+				<th colspan="25"></th>
+			</tr>
+			<tr id="RepArea">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td>Town / City / District</td>
+		<td>
+		<table id="repTown" border="1">
+			<tr hidden>
+				<th colspan="25"></th>
+			</tr>
+			<tr id="RepTown">
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+
+</table>
+
 <div style="position: relative; left: 70px;">State / Union
 Territory</div>
 <div style="position: relative; left: 70px;">Pincode</div>
@@ -3991,11 +5395,10 @@ stated above is true to the best of my/our information and belief.</b></div>
 
 
 </div>
-<input class="btn btn-primary" type="submit" value="submit" style="float:right;margin-right:100px">
-</form>
+<input class="btn btn-primary" type="submit" value="submit"
+	style="float: right; margin-right: 100px"></form>
 </div>
-<div class="span1">
-</div>
+<div class="span1"></div>
 </div>
 </body>
 </html>

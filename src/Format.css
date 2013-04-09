@@ -167,3 +167,48 @@ table#detailsTelephoneNumber tr td{
 	width: 20px;
 }
 
+table#registrationNumber tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#aadhaarNumber tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#repNameLastName tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#repNameFirstName tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#repNameMiddleName tr td{
+	height: 20px;
+	width: 20px;
+}
+
+table#repRoomNo tr td{
+	height: 20px;
+	width: 20px;
+}
+table#repBuilding tr td{
+	height: 20px;
+	width: 20px;
+}
+table#repRoad tr td{
+	height: 20px;
+	width: 20px;
+}
+table#repArea tr td{
+	height: 20px;
+	width: 20px;
+}
+table#repTown tr td{
+	height: 20px;
+	width: 20px;
+}
