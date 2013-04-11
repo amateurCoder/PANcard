@@ -4045,6 +4045,381 @@
 		
 		document.getElementById("fatherNameMiddleNameValue").value = value;
 		
+		//Residence
+		ele = editableGridResidenceRoomNo.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "rr"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("resAddressRoomNo").value = value;
+		value="";
+
+		ele = editableGridResidenceBuilding.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "rbl"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("resAddressBuilding").value = value;
+		value="";
+
+		ele = editableGridResidenceRoad.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "rroad"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("resAddressRoad").value = value;
+		value="";
+
+		ele = editableGridResidenceArea.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "rarea"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("resAddressArea").value = value;
+		value="";
+
+		ele = editableGridResidenceTown.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "rtown"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("resAddressTown").value = value;
+		value="";
+
+
+		//Office Address
+		ele = editableGridOfficeName.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "on"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("officeAddressName").value = value;
+		value="";
+
+		ele = editableGridOfficeRoomNo.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "or"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("officeAddressRoomNo").value = value;
+		value="";
+
+		ele = editableGridOfficeBuilding.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "obl"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("officeAddressBuilding").value = value;
+		value="";
+
+		ele = editableGridOfficeRoad.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "oroad"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("officeAddressRoad").value = value;
+		value="";
+
+		ele = editableGridOfficeArea.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "oarea"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("officeAddressArea").value = value;
+		value="";
+
+		ele = editableGridOfficeTown.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "otown"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("officeAddressTown").value = value;
+		value="";
+
+
+		//Telephone Number
+		ele = editableGridDetailsCountryCode.getRowValues(0);
+		for(var i=1; i<=3; i++)
+		{
+			index = "detailsCC"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("telNumberCC").value = value;
+		value="";
+
+		ele = editableGridDetailsStdCode.getRowValues(0);
+		for(var i=1; i<=7; i++)
+		{
+			index = "detailsSC"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("telNumberSC").value = value;
+		value="";
+
+		ele = editableGridDetailsTelephoneNumber.getRowValues(0);
+		for(var i=1; i<=13; i++)
+		{
+			index = "detailsTN"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("telNumberTN").value = value;
+		value="";
+
+
+		//Registration Number
+
+		ele = editableGridRegistrationNumber.getRowValues(0);
+		for(var i=1; i<=30; i++)
+		{
+			index = "regNumber"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("regNumber").value = value;
+		value="";
+
+
+		//Aadhaar Number
+
+		ele = editableGridAadhaarNumber.getRowValues(0);
+		for(var i=1; i<=12; i++)
+		{
+			index = "aadhaarNumber"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("aadhaarNumber").value = value;
+		value="";
+
+
+		//Representative Details
+
+		ele = editableGridRepNameLastName.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "repL"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("repLastName").value = value;
+		value="";
+
+		ele = editableGridRepNameFirstName.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "repF"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("repFirstName").value = value;
+		value="";
+
+		ele = editableGridRepNameMiddleName.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "repM"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("repMiddleName").value = value;
+		value="";
+		
+		ele = editableGridRepRoomNo.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "repr"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("repAddressRoomNo").value = value;
+		value="";
+
+		ele = editableGridRepBuilding.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "repbl"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("repAddressBuilding").value = value;
+		value="";
+
+		ele = editableGridRepRoad.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "reproad"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("repAddressRoad").value = value;
+		value="";
+
+		ele = editableGridRepArea.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "reparea"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("repAddressArea").value = value;
+		value="";
+
+		ele = editableGridRepTown.getRowValues(0);
+		for(var i=1; i<=25; i++)
+		{
+			index = "reptown"+i;
+			if(ele[index]==""){
+				value = value + " ";
+			}
+			else
+			{
+				value = value + ele[index];
+			}		
+		}	
+		document.getElementById("repAddressTown").value = value;
+		value="";
+		
+		
 
 		};
 		
@@ -5669,6 +6044,39 @@ stated above is true to the best of my/our information and belief.</b></div>
 <input type="hidden" name="fatherNameLastNameValue" id="fatherNameLastNameValue" value="" />
 <input type="hidden" name="fatherNameFirstNameValue" id="fatherNameFirstNameValue" value="" />
 <input type="hidden" name="fatherNameMiddleNameValue" id="fatherNameMiddleNameValue" value="" />
+
+<input type="hidden" name="resAddressRoomNo" id="resAddressRoomNo" value="" />
+<input type="hidden" name="resAddressBuilding" id="resAddressBuilding" value="" />
+<input type="hidden" name="resAddressRoad" id="resAddressRoad" value="" />
+<input type="hidden" name="resAddressArea" id="resAddressArea" value="" />
+<input type="hidden" name="resAddressTown" id="resAddressTown" value="" />
+
+<input type="hidden" name="officeAddressName" id="officeAddressName" value="" />
+<input type="hidden" name="officeAddressRoomNo" id="officeAddressRoomNo" value="" />
+<input type="hidden" name="officeAddressBuilding" id="officeAddressBuilding" value="" />
+<input type="hidden" name="officeAddressRoad" id="officeAddressRoad" value="" />
+<input type="hidden" name="officeAddressArea" id="officeAddressArea" value="" />
+<input type="hidden" name="officeAddressTown" id="officeAddressTown" value="" />
+
+<input type="hidden" name="telNumberCC" id="telNumberCC" value="" />
+<input type="hidden" name="telNumberAC" id="telNumberSC" value="" />
+<input type="hidden" name="telNumberTN" id="telNumberTN" value="" />
+
+<input type="hidden" name="regNumber" id="regNumber" value="" />
+
+<input type="hidden" name="aadhaarNumber" id="aadhaarNumber" value="" />
+
+<input type="hidden" name="repLastName" id="repLastName" value="" />
+<input type="hidden" name="repFirstName" id="repFirstName" value="" />
+<input type="hidden" name="repMiddleName" id="repMiddleName" value="" />
+
+<input type="hidden" name="repAddressRoomNo" id="repAddressRoomNo" value="" />
+<input type="hidden" name="repAddressBuilding" id="repAddressBuilding" value="" />
+<input type="hidden" name="repAddressRoad" id="repAddressRoad" value="" />
+<input type="hidden" name="repAddressArea" id="repAddressArea" value="" />
+<input type="hidden" name="repAddressTown" id="repAddressTown" value="" />
+
+
 <input class="btn btn-primary" id="btnPan" type="submit" value="submit"
 	style="float: right; margin-right: 100px"></form>
 </div>
