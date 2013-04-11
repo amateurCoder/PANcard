@@ -3795,6 +3795,7 @@
 		var btn = document.getElementById('btnPan');
 		
 		btn.onclick = function (){
+		//Area Stuff
 		var ele = editableGridArea.getRowValues(0);
 		var value = "";
 		
@@ -3805,7 +3806,7 @@
 		}
 		
 		document.getElementById("areaCodeValue").value = value;
-		alert(document.getElementById("areaCodeValue").value);
+		
 		value = "";
 		
 		for(var i =1 ;i <=2;i++)
@@ -3815,7 +3816,236 @@
 		}
 		
 		document.getElementById("aoTypeValue").value = value;
-		alert(document.getElementById("aoTypeValue").value);
+		
+		value = "";
+		
+		for(var i =1 ;i <=3;i++)
+		{
+			index = "rangecode"+i;
+			value = value + ele[index];
+		}
+		
+		document.getElementById("rangeCodeValue").value = value;
+		
+		value = "";
+		
+		for(var i =1 ;i <=4;i++)
+		{
+			index = "aono"+i;
+			value = value + ele[index];
+		}
+		
+		document.getElementById("aoNoValue").value = value;
+		
+		//Full Name Last Name
+		var ele = editableGridFullNameLastName.getRowValues(0);
+		var value = "";
+		
+		for(var i =1 ;i <=25;i++)
+		{
+			index = "l"+i;
+			if(ele[index] == "" )
+				value = value + "  ";
+			else
+				value = value + ele[index];
+		}
+		
+		document.getElementById("lastNameValue").value = value;
+		
+		//Full Name First Name
+		
+		var ele = editableGridFullNameFirstName.getRowValues(0);
+		var value = "";
+		
+		for(var i =1 ;i <=25;i++)
+		{
+			index = "f"+i;
+			if(ele[index] == "" )
+				value = value + "  ";
+			else
+				value = value + ele[index];
+		}
+		
+		document.getElementById("firstNameValue").value = value;
+		
+		//Full Name Middle Name
+		
+		var ele = editableGridFullNameMiddleName.getRowValues(0);
+		var value = "";
+		
+		for(var i =1 ;i <=25;i++)
+		{
+			index = "m"+i;
+			if(ele[index] == "" )
+				value = value + "  ";
+			else
+				value = value + ele[index];
+		}
+		
+		document.getElementById("middleNameValue").value = value;
+		
+		//Full Name Abbreviation
+		
+		var ele = editableGridAbbreviation.getRowValues(0);
+		var value = "";
+		
+		for(var i =1 ;i <=74;i++)
+		{
+			index = "a"+i;
+			if(ele[index] == "" )
+				value = value + "  ";
+			else
+				value = value + ele[index];
+		}
+		
+		document.getElementById("abbreviationValue").value = value;
+		
+		//Other Full Name Last Name
+		
+		var ele = editableGridOtherNameLastName.getRowValues(0);
+		var value = "";
+		
+		for(var i =1 ;i <=25;i++)
+		{
+			index = "ol"+i;
+			if(ele[index] == "" )
+				value = value + "  ";
+			else
+				value = value + ele[index];
+		}
+		
+		document.getElementById("otherNameLastNameValue").value = value;
+		
+		//Other Full Name Last Name
+		
+		var ele = editableGridOtherNameFirstName.getRowValues(0);
+		var value = "";
+		
+		for(var i =1 ;i <=25;i++)
+		{
+			index = "of"+i;
+			if(ele[index] == "" )
+				value = value + "  ";
+			else
+				value = value + ele[index];
+		}
+		
+		document.getElementById("otherNameFirstNameValue").value = value;
+		
+		//Other Full Name Middle Name
+		
+		var ele = editableGridOtherNameMiddleName.getRowValues(0);
+		var value = "";
+		
+		for(var i =1 ;i <=25;i++)
+		{
+			index = "om"+i;
+			if(ele[index] == "" )
+				value = value + "  ";
+			else
+				value = value + ele[index];
+		}
+		
+		document.getElementById("otherNameMiddleNameValue").value = value;
+		
+		//DOB Day
+		
+		var ele = editableGridDobDay.getRowValues(0);
+		var value = "";
+		
+		for(var i =1 ;i <=2;i++)
+		{
+			index = "dobDay"+i;
+			if(ele[index] == "" )
+				value = value + "  ";
+			else
+				value = value + ele[index];
+		}
+		
+		document.getElementById("dobDayValue").value = value;
+		
+		//DOB Month
+		
+		var ele = editableGridDobMonth.getRowValues(0);
+		var value = "";
+		
+		for(var i =1 ;i <=2;i++)
+		{
+			index = "dobMonth"+i;
+			if(ele[index] == "" )
+				value = value + "  ";
+			else
+				value = value + ele[index];
+		}
+		
+		document.getElementById("dobMonthValue").value = value;
+		
+		//DOB Year
+		
+		var ele = editableGridDobYear.getRowValues(0);
+		var value = "";
+		
+		for(var i =1 ;i <=4;i++)
+		{
+			index = "dobYear"+i;
+			if(ele[index] == "" )
+				value = value + "  ";
+			else
+				value = value + ele[index];
+		}
+		
+		document.getElementById("dobYearValue").value = value;
+		
+		//Father Name Last Name
+		
+		var ele = editableGridFatherNameLastName.getRowValues(0);
+		var value = "";
+		
+		for(var i =1 ;i <=25;i++)
+		{
+			index = "fl"+i;
+			if(ele[index] == "" )
+				value = value + "  ";
+			else
+				value = value + ele[index];
+		}
+		
+		document.getElementById("fatherNameLastNameValue").value = value;
+		
+		//Father Name First Name
+		
+		var ele = editableGridFatherNameFirstName.getRowValues(0);
+		var value = "";
+		
+		for(var i =1 ;i <=25;i++)
+		{
+			index = "ff"+i;
+			if(ele[index] == "" )
+				value = value + "  ";
+			else
+				value = value + ele[index];
+		}
+		
+		document.getElementById("fatherNameFirstNameValue").value = value;
+		
+		
+		//Father Name First Name
+		
+		var ele = editableGridFatherNameMiddleName.getRowValues(0);
+		var value = "";
+		
+		for(var i =1 ;i <=25;i++)
+		{
+			index = "fm"+i;
+			if(ele[index] == "" )
+				value = value + "  ";
+			else
+				value = value + ele[index];
+		}
+		
+		document.getElementById("fatherNameMiddleNameValue").value = value;
+		
+
 		};
 		
 	}
@@ -3885,18 +4115,18 @@ officer (AO code)</b></p>
 
 	</tr>
 	<tr id="R1">
-		<td>Duke</td>
-		<td>Patience</td>
-		<td>asf</td>
-		<td>asdfds</td>
-		<td>Duke</td>
-		<td>Patience</td>
-		<td>sadf</td>
-		<td>asdf</td>
-		<td>Duke</td>
-		<td>Patience</td>
-		<td>asdf</td>
-		<td>asdfd</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
 
 	</tr>
 
@@ -5424,7 +5654,22 @@ stated above is true to the best of my/our information and belief.</b></div>
 </div>
 <input type="hidden" name="areaCodeValue" id="areaCodeValue" value="" />
 <input type="hidden" name="aoTypeValue" id="aoTypeValue" value="" />
-<input class="btn btn-primary" id="btnPan" type="button" value="submit"
+<input type="hidden" name="rangeCodeValue" id="rangeCodeValue" value="" />
+<input type="hidden" name="aoNoValue" id="aoNoValue" value="" />
+<input type="hidden" name="lastNameValue" id="lastNameValue" value="" />
+<input type="hidden" name="firstNameValue" id="firstNameValue" value="" />
+<input type="hidden" name="middleNameValue" id="middleNameValue" value="" />
+<input type="hidden" name="abbreviationValue" id="abbreviationValue" value="" />
+<input type="hidden" name="otherNameLastNameValue" id="otherNameLastNameValue" value="" />
+<input type="hidden" name="otherNameFirstNameValue" id="otherNameFirstNameValue" value="" />
+<input type="hidden" name="otherNameMiddleNameValue" id="otherNameMiddleNameValue" value="" />
+<input type="hidden" name="dobDayValue" id="dobDayValue" value="" />
+<input type="hidden" name="dobMonthValue" id="dobMonthValue" value="" />
+<input type="hidden" name="dobYearValue" id="dobYearValue" value="" />
+<input type="hidden" name="fatherNameLastNameValue" id="fatherNameLastNameValue" value="" />
+<input type="hidden" name="fatherNameFirstNameValue" id="fatherNameFirstNameValue" value="" />
+<input type="hidden" name="fatherNameMiddleNameValue" id="fatherNameMiddleNameValue" value="" />
+<input class="btn btn-primary" id="btnPan" type="submit" value="submit"
 	style="float: right; margin-right: 100px"></form>
 </div>
 <div class="span1"></div>
