@@ -124,10 +124,10 @@
 
 	</tr>
 	<tr id="R1">
-		<td colspan="3" >${areaCodeValue}</td>
-		<td colspan="2" ></td>
-		<td colspan="3" ></td>
-		<td colspan="4" ></td>
+		<td colspan="3" >${firstNameValue}</td>
+		<td colspan="2" >${lastNameValue}</td>
+		<td colspan="3" >${fatherNameFirstNameValue}</td>
+		<td colspan="4" >${resAddressBuilding}</td>
 		
 	</tr>
 
