@@ -3793,18 +3793,29 @@
 		editableGridRepTown.renderGrid();
 		
 		var btn = document.getElementById('btnPan');
-		var ele = editableGridArea.getRowValues(0);
-		var areaCode = "";
+		
 		btn.onclick = function (){
+		var ele = editableGridArea.getRowValues(0);
+		var value = "";
 		
 		for(var i =1 ;i <=3;i++)
 		{
-			index = "aono"+i;
-			areaCode = areaCode + ele[index];
+			index = "areacode"+i;
+			value = value + ele[index];
 		}
 		
-		document.getElementById("areaCodeValue").value = areaCode;
+		document.getElementById("areaCodeValue").value = value;
+		alert(document.getElementById("areaCodeValue").value);
+		value = "";
 		
+		for(var i =1 ;i <=2;i++)
+		{
+			index = "aotype"+i;
+			value = value + ele[index];
+		}
+		
+		document.getElementById("aoTypeValue").value = value;
+		alert(document.getElementById("aoTypeValue").value);
 		};
 		
 	}
@@ -5411,8 +5422,9 @@ stated above is true to the best of my/our information and belief.</b></div>
 
 
 </div>
-<input type="hidden" name="areaCodeValue" id="areaCodeValue" />
-<input class="btn btn-primary" id="btnPan" type="submit" value="submit"
+<input type="hidden" name="areaCodeValue" id="areaCodeValue" value="" />
+<input type="hidden" name="aoTypeValue" id="aoTypeValue" value="" />
+<input class="btn btn-primary" id="btnPan" type="button" value="submit"
 	style="float: right; margin-right: 100px"></form>
 </div>
 <div class="span1"></div>
