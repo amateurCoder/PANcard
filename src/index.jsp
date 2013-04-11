@@ -3792,8 +3792,24 @@
 		editableGridRepTown.attachToHTMLTable('repTown');
 		editableGridRepTown.renderGrid();
 		
-
+		var btn = document.getElementById('btnPan');
+		var ele = editableGridArea.getRowValues(0);
+		var areaCode = "";
+		btn.onclick = function (){
+		
+		for(var i =1 ;i <=3;i++)
+		{
+			index = "aono"+i;
+			areaCode = areaCode + ele[index];
+		}
+		
+		document.getElementById("areaCodeValue").value = areaCode;
+		
+		};
+		
 	}
+	
+	
 </script>
 
 
@@ -5395,7 +5411,8 @@ stated above is true to the best of my/our information and belief.</b></div>
 
 
 </div>
-<input class="btn btn-primary" type="submit" value="submit"
+<input type="hidden" name="areaCodeValue" id="areaCodeValue" />
+<input class="btn btn-primary" id="btnPan" type="submit" value="submit"
 	style="float: right; margin-right: 100px"></form>
 </div>
 <div class="span1"></div>
