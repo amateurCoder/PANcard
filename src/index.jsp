@@ -62,6 +62,11 @@
 				"EditableGridResidenceArea");
 		editableGridResidenceTown = new EditableGrid(
 				"EditableGridResidenceTown");
+		editableGridResidenceState = new EditableGrid(
+				"EditableGridResidenceState");
+		editableGridResidenceZip = new EditableGrid("EditableGridResidenceZip");
+		editableGridResidenceCountry = new EditableGrid(
+				"EditableGridResidenceCountry");
 
 		editableGridOfficeName = new EditableGrid("EditableGridOfficeName");
 		editableGridOfficeRoomNo = new EditableGrid("EditableGridOfficeRoomNo");
@@ -70,6 +75,10 @@
 		editableGridOfficeRoad = new EditableGrid("EditableGridOfficeRoad");
 		editableGridOfficeArea = new EditableGrid("EditableGridOfficeArea");
 		editableGridOfficeTown = new EditableGrid("EditableGridOfficeTown");
+		editableGridOfficeState = new EditableGrid("EditableGridOfficeState");
+		editableGridOfficeZip = new EditableGrid("EditableGridOfficeZip");
+		editableGridOfficeCountry = new EditableGrid(
+				"EditableGridOfficeCountry");
 
 		editableGridDetailsCountryCode = new EditableGrid(
 				"EditableGridDetailsCountryCode");
@@ -1950,6 +1959,55 @@
 			} ]
 		});
 
+		editableGridResidenceState.load( {
+			metadata : [ {
+				name : "rState1",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridResidenceZip.load( {
+			metadata : [ {
+				name : "rzip1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "rzip2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "rzip3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "rzip4",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "rzip5",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "rzip6",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "rzip7",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridResidenceCountry.load( {
+			metadata : [ {
+				name : "rCountry1",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+		
+
 		editableGridOfficeName.load( {
 			metadata : [ {
 				name : "on1",
@@ -2569,6 +2627,54 @@
 				editable : true
 			}, {
 				name : "otown25",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridOfficeState.load( {
+			metadata : [ {
+				name : "oState1",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridOfficeZip.load( {
+			metadata : [ {
+				name : "ozip1",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "ozip2",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "ozip3",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "ozip4",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "ozip5",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "ozip6",
+				datatype : "string",
+				editable : true
+			}, {
+				name : "ozip7",
+				datatype : "string",
+				editable : true
+			} ]
+		});
+
+		editableGridOfficeCountry.load( {
+			metadata : [ {
+				name : "oCountry1",
 				datatype : "string",
 				editable : true
 			} ]
@@ -3742,6 +3848,12 @@
 		editableGridResidenceArea.renderGrid();
 		editableGridResidenceTown.attachToHTMLTable('residenceTown');
 		editableGridResidenceTown.renderGrid();
+		editableGridResidenceState.attachToHTMLTable('residenceState');
+		editableGridResidenceState.renderGrid();
+		editableGridResidenceZip.attachToHTMLTable('residenceZip');
+		editableGridResidenceZip.renderGrid();
+		editableGridResidenceCountry.attachToHTMLTable('residenceCountry');
+		editableGridResidenceCountry.renderGrid();
 
 		editableGridOfficeName.attachToHTMLTable('officeName');
 		editableGridOfficeName.renderGrid();
@@ -3755,6 +3867,12 @@
 		editableGridOfficeArea.renderGrid();
 		editableGridOfficeTown.attachToHTMLTable('officeTown');
 		editableGridOfficeTown.renderGrid();
+		editableGridOfficeState.attachToHTMLTable('officeState');
+		editableGridOfficeState.renderGrid();
+		editableGridOfficeZip.attachToHTMLTable('officeZip');
+		editableGridOfficeZip.renderGrid();
+		editableGridOfficeCountry.attachToHTMLTable('officeCountry');
+		editableGridOfficeCountry.renderGrid();
 
 		editableGridDetailsCountryCode.attachToHTMLTable('detailsCountryCode');
 		editableGridDetailsCountryCode.renderGrid();
@@ -3791,641 +3909,616 @@
 		editableGridRepArea.renderGrid();
 		editableGridRepTown.attachToHTMLTable('repTown');
 		editableGridRepTown.renderGrid();
-		
+
 		var btn = document.getElementById('btnPan');
-		
-		btn.onclick = function (){
-		//Area Stuff
-		var ele = editableGridArea.getRowValues(0);
-		var value = "";
-		
-		for(var i =1 ;i <=3;i++)
-		{
-			index = "areacode"+i;
-			value = value + ele[index];
-		}
-		
-		document.getElementById("areaCodeValue").value = value;
-		
-		value = "";
-		
-		for(var i =1 ;i <=2;i++)
-		{
-			index = "aotype"+i;
-			value = value + ele[index];
-		}
-		
-		document.getElementById("aoTypeValue").value = value;
-		
-		value = "";
-		
-		for(var i =1 ;i <=3;i++)
-		{
-			index = "rangecode"+i;
-			value = value + ele[index];
-		}
-		
-		document.getElementById("rangeCodeValue").value = value;
-		
-		value = "";
-		
-		for(var i =1 ;i <=4;i++)
-		{
-			index = "aono"+i;
-			value = value + ele[index];
-		}
-		
-		document.getElementById("aoNoValue").value = value;
-		
-		//Full Name Last Name
-		var ele = editableGridFullNameLastName.getRowValues(0);
-		var value = "";
-		
-		for(var i =1 ;i <=25;i++)
-		{
-			index = "l"+i;
-			if(ele[index] == "" )
-				value = value + "  ";
-			else
+
+		btn.onclick = function() {
+			//Area Stuff
+			var ele = editableGridArea.getRowValues(0);
+			var value = "";
+
+			for ( var i = 1; i <= 3; i++) {
+				index = "areacode" + i;
 				value = value + ele[index];
-		}
-		
-		document.getElementById("lastNameValue").value = value;
-		
-		//Full Name First Name
-		
-		var ele = editableGridFullNameFirstName.getRowValues(0);
-		var value = "";
-		
-		for(var i =1 ;i <=25;i++)
-		{
-			index = "f"+i;
-			if(ele[index] == "" )
-				value = value + "  ";
-			else
-				value = value + ele[index];
-		}
-		
-		document.getElementById("firstNameValue").value = value;
-		
-		//Full Name Middle Name
-		
-		var ele = editableGridFullNameMiddleName.getRowValues(0);
-		var value = "";
-		
-		for(var i =1 ;i <=25;i++)
-		{
-			index = "m"+i;
-			if(ele[index] == "" )
-				value = value + "  ";
-			else
-				value = value + ele[index];
-		}
-		
-		document.getElementById("middleNameValue").value = value;
-		
-		//Full Name Abbreviation
-		
-		var ele = editableGridAbbreviation.getRowValues(0);
-		var value = "";
-		
-		for(var i =1 ;i <=74;i++)
-		{
-			index = "a"+i;
-			if(ele[index] == "" )
-				value = value + "  ";
-			else
-				value = value + ele[index];
-		}
-		
-		document.getElementById("abbreviationValue").value = value;
-		
-		//Other Full Name Last Name
-		
-		var ele = editableGridOtherNameLastName.getRowValues(0);
-		var value = "";
-		
-		for(var i =1 ;i <=25;i++)
-		{
-			index = "ol"+i;
-			if(ele[index] == "" )
-				value = value + "  ";
-			else
-				value = value + ele[index];
-		}
-		
-		document.getElementById("otherNameLastNameValue").value = value;
-		
-		//Other Full Name Last Name
-		
-		var ele = editableGridOtherNameFirstName.getRowValues(0);
-		var value = "";
-		
-		for(var i =1 ;i <=25;i++)
-		{
-			index = "of"+i;
-			if(ele[index] == "" )
-				value = value + "  ";
-			else
-				value = value + ele[index];
-		}
-		
-		document.getElementById("otherNameFirstNameValue").value = value;
-		
-		//Other Full Name Middle Name
-		
-		var ele = editableGridOtherNameMiddleName.getRowValues(0);
-		var value = "";
-		
-		for(var i =1 ;i <=25;i++)
-		{
-			index = "om"+i;
-			if(ele[index] == "" )
-				value = value + "  ";
-			else
-				value = value + ele[index];
-		}
-		
-		document.getElementById("otherNameMiddleNameValue").value = value;
-		
-		//DOB Day
-		
-		var ele = editableGridDobDay.getRowValues(0);
-		var value = "";
-		
-		for(var i =1 ;i <=2;i++)
-		{
-			index = "dobDay"+i;
-			if(ele[index] == "" )
-				value = value + "  ";
-			else
-				value = value + ele[index];
-		}
-		
-		document.getElementById("dobDayValue").value = value;
-		
-		//DOB Month
-		
-		var ele = editableGridDobMonth.getRowValues(0);
-		var value = "";
-		
-		for(var i =1 ;i <=2;i++)
-		{
-			index = "dobMonth"+i;
-			if(ele[index] == "" )
-				value = value + "  ";
-			else
-				value = value + ele[index];
-		}
-		
-		document.getElementById("dobMonthValue").value = value;
-		
-		//DOB Year
-		
-		var ele = editableGridDobYear.getRowValues(0);
-		var value = "";
-		
-		for(var i =1 ;i <=4;i++)
-		{
-			index = "dobYear"+i;
-			if(ele[index] == "" )
-				value = value + "  ";
-			else
-				value = value + ele[index];
-		}
-		
-		document.getElementById("dobYearValue").value = value;
-		
-		//Father Name Last Name
-		
-		var ele = editableGridFatherNameLastName.getRowValues(0);
-		var value = "";
-		
-		for(var i =1 ;i <=25;i++)
-		{
-			index = "fl"+i;
-			if(ele[index] == "" )
-				value = value + "  ";
-			else
-				value = value + ele[index];
-		}
-		
-		document.getElementById("fatherNameLastNameValue").value = value;
-		
-		//Father Name First Name
-		
-		var ele = editableGridFatherNameFirstName.getRowValues(0);
-		var value = "";
-		
-		for(var i =1 ;i <=25;i++)
-		{
-			index = "ff"+i;
-			if(ele[index] == "" )
-				value = value + "  ";
-			else
-				value = value + ele[index];
-		}
-		
-		document.getElementById("fatherNameFirstNameValue").value = value;
-		
-		
-		//Father Name First Name
-		
-		var ele = editableGridFatherNameMiddleName.getRowValues(0);
-		var value = "";
-		
-		for(var i =1 ;i <=25;i++)
-		{
-			index = "fm"+i;
-			if(ele[index] == "" )
-				value = value + "  ";
-			else
-				value = value + ele[index];
-		}
-		
-		document.getElementById("fatherNameMiddleNameValue").value = value;
-		
-		//Residence
-		ele = editableGridResidenceRoomNo.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "rr"+i;
-			if(ele[index]==""){
-				value = value + " ";
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("resAddressRoomNo").value = value;
-		value="";
 
-		ele = editableGridResidenceBuilding.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "rbl"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			document.getElementById("areaCodeValue").value = value;
+
+			value = "";
+
+			for ( var i = 1; i <= 2; i++) {
+				index = "aotype" + i;
+				value = value + ele[index];
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("resAddressBuilding").value = value;
-		value="";
 
-		ele = editableGridResidenceRoad.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "rroad"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			document.getElementById("aoTypeValue").value = value;
+
+			value = "";
+
+			for ( var i = 1; i <= 3; i++) {
+				index = "rangecode" + i;
+				value = value + ele[index];
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("resAddressRoad").value = value;
-		value="";
 
-		ele = editableGridResidenceArea.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "rarea"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			document.getElementById("rangeCodeValue").value = value;
+
+			value = "";
+
+			for ( var i = 1; i <= 4; i++) {
+				index = "aono" + i;
+				value = value + ele[index];
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("resAddressArea").value = value;
-		value="";
 
-		ele = editableGridResidenceTown.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "rtown"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			document.getElementById("aoNoValue").value = value;
+
+			//Full Name Last Name
+			var ele = editableGridFullNameLastName.getRowValues(0);
+			var value = "";
+
+			for ( var i = 1; i <= 25; i++) {
+				index = "l" + i;
+				if (ele[index] == "")
+					value = value + "  ";
+				else
+					value = value + ele[index];
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("resAddressTown").value = value;
-		value="";
 
+			document.getElementById("lastNameValue").value = value;
 
-		//Office Address
-		ele = editableGridOfficeName.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "on"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			//Full Name First Name
+
+			var ele = editableGridFullNameFirstName.getRowValues(0);
+			var value = "";
+
+			for ( var i = 1; i <= 25; i++) {
+				index = "f" + i;
+				if (ele[index] == "")
+					value = value + "  ";
+				else
+					value = value + ele[index];
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("officeAddressName").value = value;
-		value="";
 
-		ele = editableGridOfficeRoomNo.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "or"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			document.getElementById("firstNameValue").value = value;
+
+			//Full Name Middle Name
+
+			var ele = editableGridFullNameMiddleName.getRowValues(0);
+			var value = "";
+
+			for ( var i = 1; i <= 25; i++) {
+				index = "m" + i;
+				if (ele[index] == "")
+					value = value + "  ";
+				else
+					value = value + ele[index];
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("officeAddressRoomNo").value = value;
-		value="";
 
-		ele = editableGridOfficeBuilding.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "obl"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			document.getElementById("middleNameValue").value = value;
+
+			//Full Name Abbreviation
+
+			var ele = editableGridAbbreviation.getRowValues(0);
+			var value = "";
+
+			for ( var i = 1; i <= 74; i++) {
+				index = "a" + i;
+				if (ele[index] == "")
+					value = value + "  ";
+				else
+					value = value + ele[index];
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("officeAddressBuilding").value = value;
-		value="";
 
-		ele = editableGridOfficeRoad.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "oroad"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			document.getElementById("abbreviationValue").value = value;
+
+			//Other Full Name Last Name
+
+			var ele = editableGridOtherNameLastName.getRowValues(0);
+			var value = "";
+
+			for ( var i = 1; i <= 25; i++) {
+				index = "ol" + i;
+				if (ele[index] == "")
+					value = value + "  ";
+				else
+					value = value + ele[index];
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("officeAddressRoad").value = value;
-		value="";
 
-		ele = editableGridOfficeArea.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "oarea"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			document.getElementById("otherNameLastNameValue").value = value;
+
+			//Other Full Name Last Name
+
+			var ele = editableGridOtherNameFirstName.getRowValues(0);
+			var value = "";
+
+			for ( var i = 1; i <= 25; i++) {
+				index = "of" + i;
+				if (ele[index] == "")
+					value = value + "  ";
+				else
+					value = value + ele[index];
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("officeAddressArea").value = value;
-		value="";
 
-		ele = editableGridOfficeTown.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "otown"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			document.getElementById("otherNameFirstNameValue").value = value;
+
+			//Other Full Name Middle Name
+
+			var ele = editableGridOtherNameMiddleName.getRowValues(0);
+			var value = "";
+
+			for ( var i = 1; i <= 25; i++) {
+				index = "om" + i;
+				if (ele[index] == "")
+					value = value + "  ";
+				else
+					value = value + ele[index];
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("officeAddressTown").value = value;
-		value="";
 
+			document.getElementById("otherNameMiddleNameValue").value = value;
 
-		//Telephone Number
-		ele = editableGridDetailsCountryCode.getRowValues(0);
-		for(var i=1; i<=3; i++)
-		{
-			index = "detailsCC"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			//DOB Day
+
+			var ele = editableGridDobDay.getRowValues(0);
+			var value = "";
+
+			for ( var i = 1; i <= 2; i++) {
+				index = "dobDay" + i;
+				if (ele[index] == "")
+					value = value + "  ";
+				else
+					value = value + ele[index];
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("telNumberCC").value = value;
-		value="";
 
-		ele = editableGridDetailsStdCode.getRowValues(0);
-		for(var i=1; i<=7; i++)
-		{
-			index = "detailsSC"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			document.getElementById("dobDayValue").value = value;
+
+			//DOB Month
+
+			var ele = editableGridDobMonth.getRowValues(0);
+			var value = "";
+
+			for ( var i = 1; i <= 2; i++) {
+				index = "dobMonth" + i;
+				if (ele[index] == "")
+					value = value + "  ";
+				else
+					value = value + ele[index];
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("telNumberSC").value = value;
-		value="";
 
-		ele = editableGridDetailsTelephoneNumber.getRowValues(0);
-		for(var i=1; i<=13; i++)
-		{
-			index = "detailsTN"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			document.getElementById("dobMonthValue").value = value;
+
+			//DOB Year
+
+			var ele = editableGridDobYear.getRowValues(0);
+			var value = "";
+
+			for ( var i = 1; i <= 4; i++) {
+				index = "dobYear" + i;
+				if (ele[index] == "")
+					value = value + "  ";
+				else
+					value = value + ele[index];
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("telNumberTN").value = value;
-		value="";
 
+			document.getElementById("dobYearValue").value = value;
 
-		//Registration Number
+			//Father Name Last Name
 
-		ele = editableGridRegistrationNumber.getRowValues(0);
-		for(var i=1; i<=30; i++)
-		{
-			index = "regNumber"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			var ele = editableGridFatherNameLastName.getRowValues(0);
+			var value = "";
+
+			for ( var i = 1; i <= 25; i++) {
+				index = "fl" + i;
+				if (ele[index] == "")
+					value = value + "  ";
+				else
+					value = value + ele[index];
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("regNumber").value = value;
-		value="";
 
+			document.getElementById("fatherNameLastNameValue").value = value;
 
-		//Aadhaar Number
+			//Father Name First Name
 
-		ele = editableGridAadhaarNumber.getRowValues(0);
-		for(var i=1; i<=12; i++)
-		{
-			index = "aadhaarNumber"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			var ele = editableGridFatherNameFirstName.getRowValues(0);
+			var value = "";
+
+			for ( var i = 1; i <= 25; i++) {
+				index = "ff" + i;
+				if (ele[index] == "")
+					value = value + "  ";
+				else
+					value = value + ele[index];
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("aadhaarNumber").value = value;
-		value="";
 
+			document.getElementById("fatherNameFirstNameValue").value = value;
 
-		//Representative Details
+			//Father Name First Name
 
-		ele = editableGridRepNameLastName.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "repL"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			var ele = editableGridFatherNameMiddleName.getRowValues(0);
+			var value = "";
+
+			for ( var i = 1; i <= 25; i++) {
+				index = "fm" + i;
+				if (ele[index] == "")
+					value = value + "  ";
+				else
+					value = value + ele[index];
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("repLastName").value = value;
-		value="";
 
-		ele = editableGridRepNameFirstName.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "repF"+i;
-			if(ele[index]==""){
-				value = value + " ";
-			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("repFirstName").value = value;
-		value="";
+			document.getElementById("fatherNameMiddleNameValue").value = value;
 
-		ele = editableGridRepNameMiddleName.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "repM"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			//Residence
+			ele = editableGridResidenceRoomNo.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "rr" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("repMiddleName").value = value;
-		value="";
-		
-		ele = editableGridRepRoomNo.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "repr"+i;
-			if(ele[index]==""){
-				value = value + " ";
-			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("repAddressRoomNo").value = value;
-		value="";
+			document.getElementById("resAddressRoomNo").value = value;
+			value = "";
 
-		ele = editableGridRepBuilding.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "repbl"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			ele = editableGridResidenceBuilding.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "rbl" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("repAddressBuilding").value = value;
-		value="";
+			document.getElementById("resAddressBuilding").value = value;
+			value = "";
 
-		ele = editableGridRepRoad.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "reproad"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			ele = editableGridResidenceRoad.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "rroad" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("repAddressRoad").value = value;
-		value="";
+			document.getElementById("resAddressRoad").value = value;
+			value = "";
 
-		ele = editableGridRepArea.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "reparea"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			ele = editableGridResidenceArea.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "rarea" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("repAddressArea").value = value;
-		value="";
+			document.getElementById("resAddressArea").value = value;
+			value = "";
 
-		ele = editableGridRepTown.getRowValues(0);
-		for(var i=1; i<=25; i++)
-		{
-			index = "reptown"+i;
-			if(ele[index]==""){
-				value = value + " ";
+			ele = editableGridResidenceTown.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "rtown" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
 			}
-			else
-			{
-				value = value + ele[index];
-			}		
-		}	
-		document.getElementById("repAddressTown").value = value;
-		value="";
-		
-		
+			document.getElementById("resAddressTown").value = value;
+			value = "";
+
+			ele = editableGridResidenceState.getRowValues(0);
+			for ( var i = 1; i <= 1; i++) {
+				index = "rState" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("residenceState").value = value;
+			value = "";
+
+			ele = editableGridResidenceZip.getRowValues(0);
+			for ( var i = 1; i <= 7; i++) {
+				index = "rzip" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("residenceZip").value = value;
+			value = "";
+
+			ele = editableGridResidenceCountry.getRowValues(0);
+			for ( var i = 1; i <= 1; i++) {
+				index = "rCountry" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("residenceCountry").value = value;
+			value = "";
+			
+			
+			//Office Address
+			ele = editableGridOfficeName.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "on" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("officeAddressName").value = value;
+			value = "";
+
+			ele = editableGridOfficeRoomNo.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "or" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("officeAddressRoomNo").value = value;
+			value = "";
+
+			ele = editableGridOfficeBuilding.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "obl" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("officeAddressBuilding").value = value;
+			value = "";
+
+			ele = editableGridOfficeRoad.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "oroad" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("officeAddressRoad").value = value;
+			value = "";
+
+			ele = editableGridOfficeArea.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "oarea" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("officeAddressArea").value = value;
+			value = "";
+
+			ele = editableGridOfficeTown.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "otown" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("officeAddressTown").value = value;
+			value = "";
+
+			ele = editableGridOfficeState.getRowValues(0);
+			for ( var i = 1; i <= 1; i++) {
+				index = "oState" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("officeState").value = value;
+			value = "";
+
+			ele = editableGridOfficeZip.getRowValues(0);
+			for ( var i = 1; i <= 7; i++) {
+				index = "ozip" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("officeZip").value = value;
+			value = "";
+
+			ele = editableGridOfficeCountry.getRowValues(0);
+			for ( var i = 1; i <= 1; i++) {
+				index = "oCountry" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("officeCountry").value = value;
+			value = "";
+			
+
+			//Telephone Number
+			ele = editableGridDetailsCountryCode.getRowValues(0);
+			for ( var i = 1; i <= 3; i++) {
+				index = "detailsCC" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("telNumberCC").value = value;
+			value = "";
+
+			ele = editableGridDetailsStdCode.getRowValues(0);
+			for ( var i = 1; i <= 7; i++) {
+				index = "detailsSC" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("telNumberSC").value = value;
+			value = "";
+
+			ele = editableGridDetailsTelephoneNumber.getRowValues(0);
+			for ( var i = 1; i <= 13; i++) {
+				index = "detailsTN" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("telNumberTN").value = value;
+			value = "";
+
+			//Registration Number
+
+			ele = editableGridRegistrationNumber.getRowValues(0);
+			for ( var i = 1; i <= 30; i++) {
+				index = "regNumber" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("regNumber").value = value;
+			value = "";
+
+			//Aadhaar Number
+
+			ele = editableGridAadhaarNumber.getRowValues(0);
+			for ( var i = 1; i <= 12; i++) {
+				index = "aadhaarNumber" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("aadhaarNumber").value = value;
+			value = "";
+
+			//Representative Details
+
+			ele = editableGridRepNameLastName.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "repL" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("repLastName").value = value;
+			value = "";
+
+			ele = editableGridRepNameFirstName.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "repF" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("repFirstName").value = value;
+			value = "";
+
+			ele = editableGridRepNameMiddleName.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "repM" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("repMiddleName").value = value;
+			value = "";
+
+			ele = editableGridRepRoomNo.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "repr" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("repAddressRoomNo").value = value;
+			value = "";
+
+			ele = editableGridRepBuilding.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "repbl" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("repAddressBuilding").value = value;
+			value = "";
+
+			ele = editableGridRepRoad.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "reproad" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("repAddressRoad").value = value;
+			value = "";
+
+			ele = editableGridRepArea.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "reparea" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("repAddressArea").value = value;
+			value = "";
+
+			ele = editableGridRepTown.getRowValues(0);
+			for ( var i = 1; i <= 25; i++) {
+				index = "reptown" + i;
+				if (ele[index] == "") {
+					value = value + " ";
+				} else {
+					value = value + ele[index];
+				}
+			}
+			document.getElementById("repAddressTown").value = value;
+			value = "";
 
 		};
-		
+
 	}
-	
-	
 </script>
 
 
@@ -5233,12 +5326,52 @@ Address</b></div>
 		</table>
 		</td>
 	</tr>
-
 </table>
-<div style="position: relative; left: 70px;">State / Union
-Territory</div>
-<div style="position: relative; left: 70px;">Pincode / Zip code</div>
-<div style="position: relative; left: 70px;">Country Name</div>
+<table style="margin-left: 70px">
+	<tr>
+		<td>State / Union Territory</td>
+		<td>Pincode / Zip code</td>
+		<td>Country Name</td>
+	</tr>
+	<tr>
+		<td>
+		<table id="residenceState" border="1">
+			<tr hidden>
+				<th></th>
+			</tr>
+			<tr id="RState">
+				<td style="height: 20px; width: 350px;"></td>
+			</tr>
+		</table>
+		</td>
+		<td>
+		<table id="residenceZip" border="1">
+			<tr hidden>
+				<th colspan="7"></th>
+			</tr>
+			<tr id="RZip">
+				<td style="height: 20px; width: 20px;"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</td>
+		<td>
+		<table id="residenceCountry" border="1">
+			<tr hidden>
+				<th></th>
+			</tr>
+			<tr id="RCountry">
+				<td style="height: 20px; width: 300px;"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
 <br>
 <div style="position: relative; left: 70px;"><b>Office Address</b></div>
 <br>
@@ -5467,13 +5600,53 @@ Territory</div>
 	</tr>
 
 </table>
-
-
-<div style="position: relative; left: 70px;">State / Union
-Territory</div>
-<div style="position: relative; left: 70px;">Pincode / Zip code</div>
-<div style="position: relative; left: 70px;">Country Name</div>
+<table style="margin-left: 70px">
+	<tr>
+		<td>State / Union Territory</td>
+		<td>Pincode / Zip code</td>
+		<td>Country Name</td>
+	</tr>
+	<tr>
+		<td>
+		<table id="officeState" border="1">
+			<tr hidden>
+				<th></th>
+			</tr>
+			<tr id="OState">
+				<td style="height: 20px; width: 350px;"></td>
+			</tr>
+		</table>
+		</td>
+		<td>
+		<table id="officeZip" border="1">
+			<tr hidden>
+				<th colspan="7"></th>
+			</tr>
+			<tr id="OZip">
+				<td style="height: 20px; width: 20px;"></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		</td>
+		<td>
+		<table id="officeCountry" border="1">
+			<tr hidden>
+				<th></th>
+			</tr>
+			<tr id="OCountry">
+				<td style="height: 20px; width: 300px;"></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table>
 <br>
+
 <div class="divWithBackgroundGrey">
 <p class="para"><b>8 Address for Communication</b><input
 	type="checkbox" name="address" value="Residence"><b>Residence</b><input
@@ -5485,7 +5658,7 @@ applicable)</i></p>
 <p class="para"><b>9 Telephone Number & Email ID details</b></p>
 </div>
 
-<div style="position: relative; left: 70px; width: 300px">
+<div style="position: relative; left: 150px; width: 1000px">
 <table id="detailsCountryCode" border="1" style="float: left;">
 	<tr>
 		<th colspan="3">Country code</th>
@@ -5540,7 +5713,8 @@ applicable)</i></p>
 
 
 <br>
-<div style="position: relative; left: 70px;">Email ID</div>
+<div style="position: relative; left: 70px;">Email ID<input
+	style="position: relative; left: 30px; width: 700px;" type="text" name="email"></div>
 <br>
 <br>
 <div class="divWithBackgroundGrey">
@@ -6028,56 +6202,70 @@ stated above is true to the best of my/our information and belief.</b></div>
 
 </div>
 <input type="hidden" name="areaCodeValue" id="areaCodeValue" value="" />
-<input type="hidden" name="aoTypeValue" id="aoTypeValue" value="" />
-<input type="hidden" name="rangeCodeValue" id="rangeCodeValue" value="" />
-<input type="hidden" name="aoNoValue" id="aoNoValue" value="" />
-<input type="hidden" name="lastNameValue" id="lastNameValue" value="" />
-<input type="hidden" name="firstNameValue" id="firstNameValue" value="" />
-<input type="hidden" name="middleNameValue" id="middleNameValue" value="" />
-<input type="hidden" name="abbreviationValue" id="abbreviationValue" value="" />
-<input type="hidden" name="otherNameLastNameValue" id="otherNameLastNameValue" value="" />
-<input type="hidden" name="otherNameFirstNameValue" id="otherNameFirstNameValue" value="" />
-<input type="hidden" name="otherNameMiddleNameValue" id="otherNameMiddleNameValue" value="" />
-<input type="hidden" name="dobDayValue" id="dobDayValue" value="" />
-<input type="hidden" name="dobMonthValue" id="dobMonthValue" value="" />
-<input type="hidden" name="dobYearValue" id="dobYearValue" value="" />
-<input type="hidden" name="fatherNameLastNameValue" id="fatherNameLastNameValue" value="" />
-<input type="hidden" name="fatherNameFirstNameValue" id="fatherNameFirstNameValue" value="" />
-<input type="hidden" name="fatherNameMiddleNameValue" id="fatherNameMiddleNameValue" value="" />
-
-<input type="hidden" name="resAddressRoomNo" id="resAddressRoomNo" value="" />
-<input type="hidden" name="resAddressBuilding" id="resAddressBuilding" value="" />
-<input type="hidden" name="resAddressRoad" id="resAddressRoad" value="" />
-<input type="hidden" name="resAddressArea" id="resAddressArea" value="" />
-<input type="hidden" name="resAddressTown" id="resAddressTown" value="" />
-
-<input type="hidden" name="officeAddressName" id="officeAddressName" value="" />
-<input type="hidden" name="officeAddressRoomNo" id="officeAddressRoomNo" value="" />
-<input type="hidden" name="officeAddressBuilding" id="officeAddressBuilding" value="" />
-<input type="hidden" name="officeAddressRoad" id="officeAddressRoad" value="" />
-<input type="hidden" name="officeAddressArea" id="officeAddressArea" value="" />
-<input type="hidden" name="officeAddressTown" id="officeAddressTown" value="" />
-
-<input type="hidden" name="telNumberCC" id="telNumberCC" value="" />
-<input type="hidden" name="telNumberAC" id="telNumberSC" value="" />
-<input type="hidden" name="telNumberTN" id="telNumberTN" value="" />
-
-<input type="hidden" name="regNumber" id="regNumber" value="" />
-
-<input type="hidden" name="aadhaarNumber" id="aadhaarNumber" value="" />
-
-<input type="hidden" name="repLastName" id="repLastName" value="" />
-<input type="hidden" name="repFirstName" id="repFirstName" value="" />
-<input type="hidden" name="repMiddleName" id="repMiddleName" value="" />
-
-<input type="hidden" name="repAddressRoomNo" id="repAddressRoomNo" value="" />
-<input type="hidden" name="repAddressBuilding" id="repAddressBuilding" value="" />
-<input type="hidden" name="repAddressRoad" id="repAddressRoad" value="" />
-<input type="hidden" name="repAddressArea" id="repAddressArea" value="" />
-<input type="hidden" name="repAddressTown" id="repAddressTown" value="" />
-
-
-<input class="btn btn-primary" id="btnPan" type="submit" value="submit"
+<input type="hidden" name="aoTypeValue" id="aoTypeValue" value="" /> <input
+	type="hidden" name="rangeCodeValue" id="rangeCodeValue" value="" /> <input
+	type="hidden" name="aoNoValue" id="aoNoValue" value="" /> <input
+	type="hidden" name="lastNameValue" id="lastNameValue" value="" /> <input
+	type="hidden" name="firstNameValue" id="firstNameValue" value="" /> <input
+	type="hidden" name="middleNameValue" id="middleNameValue" value="" />
+<input type="hidden" name="abbreviationValue" id="abbreviationValue"
+	value="" /> <input type="hidden" name="otherNameLastNameValue"
+	id="otherNameLastNameValue" value="" /> <input type="hidden"
+	name="otherNameFirstNameValue" id="otherNameFirstNameValue" value="" />
+<input type="hidden" name="otherNameMiddleNameValue"
+	id="otherNameMiddleNameValue" value="" /> <input type="hidden"
+	name="dobDayValue" id="dobDayValue" value="" /> <input type="hidden"
+	name="dobMonthValue" id="dobMonthValue" value="" /> <input
+	type="hidden" name="dobYearValue" id="dobYearValue" value="" /> <input
+	type="hidden" name="fatherNameLastNameValue"
+	id="fatherNameLastNameValue" value="" /> <input type="hidden"
+	name="fatherNameFirstNameValue" id="fatherNameFirstNameValue" value="" />
+<input type="hidden" name="fatherNameMiddleNameValue"
+	id="fatherNameMiddleNameValue" value="" /> <input type="hidden"
+	name="resAddressRoomNo" id="resAddressRoomNo" value="" /> <input
+	type="hidden" name="resAddressBuilding" id="resAddressBuilding"
+	value="" /> <input type="hidden" name="resAddressRoad"
+	id="resAddressRoad" value="" /> <input type="hidden"
+	name="resAddressArea" id="resAddressArea" value="" /> <input
+	type="hidden" name="resAddressTown" id="resAddressTown" value="" />
+	<input
+	type="hidden" name="residenceState" id="residenceState" value="" />
+	<input
+	type="hidden" name="residenceZip" id="residenceZip" value="" />
+	<input
+	type="hidden" name="residenceCountry" id="residenceCountry" value="" />
+	
+	 <input
+	type="hidden" name="officeAddressName" id="officeAddressName" value="" />
+<input type="hidden" name="officeAddressRoomNo" id="officeAddressRoomNo"
+	value="" /> <input type="hidden" name="officeAddressBuilding"
+	id="officeAddressBuilding" value="" /> <input type="hidden"
+	name="officeAddressRoad" id="officeAddressRoad" value="" /> <input
+	type="hidden" name="officeAddressArea" id="officeAddressArea" value="" />
+<input type="hidden" name="officeAddressTown" id="officeAddressTown"
+	value="" /> 
+	<input
+	type="hidden" name="officeState" id="officeState" value="" />
+	<input
+	type="hidden" name="officeZip" id="officeZip" value="" />
+	<input
+	type="hidden" name="officeCountry" id="officeCountry" value="" />
+	<input type="hidden" name="telNumberCC" id="telNumberCC"
+	value="" /> <input type="hidden" name="telNumberAC" id="telNumberSC"
+	value="" /> <input type="hidden" name="telNumberTN" id="telNumberTN"
+	value="" /> <input type="hidden" name="regNumber" id="regNumber"
+	value="" /> <input type="hidden" name="aadhaarNumber"
+	id="aadhaarNumber" value="" /> <input type="hidden" name="repLastName"
+	id="repLastName" value="" /> <input type="hidden" name="repFirstName"
+	id="repFirstName" value="" /> <input type="hidden"
+	name="repMiddleName" id="repMiddleName" value="" /> <input
+	type="hidden" name="repAddressRoomNo" id="repAddressRoomNo" value="" />
+<input type="hidden" name="repAddressBuilding" id="repAddressBuilding"
+	value="" /> <input type="hidden" name="repAddressRoad"
+	id="repAddressRoad" value="" /> <input type="hidden"
+	name="repAddressArea" id="repAddressArea" value="" /> <input
+	type="hidden" name="repAddressTown" id="repAddressTown" value="" /> <input
+	class="btn btn-primary" id="btnPan" type="submit" value="submit"
 	style="float: right; margin-right: 100px"></form>
 </div>
 <div class="span1"></div>
